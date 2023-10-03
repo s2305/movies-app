@@ -9,9 +9,9 @@
 .gridforcards
 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+     flex-direction: row; 
+    /* flex-wrap: ----; TODO : renseigner avec la bonne valeur */     
     width:80%;
     background-color: #fffffa;
-    justify-content: space-between;
+    /* justify-content: ---; TODO : renseigner avcec la bonne valeur */
 }
