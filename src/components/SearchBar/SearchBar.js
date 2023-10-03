@@ -1,9 +1,9 @@
 import React from 'react';
 import './SearchBar.css'
 
-const SearchBar = ({onSearchChange, searchValue})=>{
+const SearchBar = ()=>{
 
-    return (<div><input className="searchinput" onChange={(e)=>onSearchChange(e.target.value)} value={searchValue}></input></div>);
+    return (<div></div>);
 }
 
 export default SearchBar;
