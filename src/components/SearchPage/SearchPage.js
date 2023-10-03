@@ -1,11 +1,15 @@
 
 import React, {useState, useEffect} from 'react';
 import './SearchPage.css'
+import SearchBar from '../SearchBar/SearchBar'
 import Card from '../Card/Card'
 
  const SearchPage = () => {
 
+    const [searchTerm, setSearchTerm] = useState("Star wars");
     const [data, setData] = useState([]);
+
+    const onSearchChange = (e)=>{console.log(e.target.value);   setSearchTerm(e.target.value);};
 
     useEffect(() => {
     fetch('./dataSource.json')
@@ -21,12 +25,12 @@ import Card from '../Card/Card'
 
     return (
         <div className='container'>
+        <h1>Movies app</h1>    
+        <SearchBar onSearchChange={onSearchChange} searchValue={searchTerm}></SearchBar>   
         <div className='gridforcards'>
             {data.map((movie)=><Card film={movie}></Card>)}
         </div>
         </div>
-        
-
     )
 
 }
