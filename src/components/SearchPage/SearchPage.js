@@ -21,7 +21,7 @@ import useAxios from '../../customHooks/useAxios'
 
   const [searchTerm, setSearchTerm] = useState("Titanic");
   
-  const films = useAxios(`http://www.omdbapi.com/?apikey=417978c1&s=${searchTerm}`)  
+  const films = useAxios(`https://www.omdbapi.com/?apikey=417978c1&s=${searchTerm}`)  
 
   const txtToDisplay = searchTerm?.length === 0 ? "Veuillez renseigner une recherche" : "Recherche infructueuse"
   const movies = (films != null) ? films.map((film, index) => <Card film={film} key={index}></Card>) : <div>{txtToDisplay}</div>;
