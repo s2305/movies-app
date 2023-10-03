@@ -15,8 +15,6 @@ const useAxios= (url)=>
 
  },[url])
 
-   console.log("------data");
-  console.log(data);
   return data;
 
 }
